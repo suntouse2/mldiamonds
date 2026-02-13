@@ -1,0 +1,55 @@
+{
+  "name": "MLDiamonds",
+  "version": "0.2.2",
+  "private": true,
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3001"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.27.13",
+    "@prisma/client": "^6.11.1",
+    "axios": "^1.10.0",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "dotenv": "^17.2.2",
+    "framer-motion": "^12.23.12",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.525.0",
+    "motion": "^12.23.3",
+    "nanoid": "^5.1.5",
+    "next": "^15.5.9",
+    "nodemailer": "^7.0.10",
+    "openai": "^5.10.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hot-toast": "^2.6.0",
+    "react-snowfall": "^2.4.0",
+    "swr": "^2.3.4",
+    "zod": "^3.25.76",
+    "zustand": "^5.0.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/nanoid": "^2.1.0",
+    "@types/node": "^20",
+    "@types/nodemailer": "^7.0.3",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "cssnano": "^7.0.7",
+    "dotenv-cli": "^9.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "prisma": "^6.11.1",
+    "tailwindcss": "^4",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.3",
+    "typescript": "^5"
+  }
+}
