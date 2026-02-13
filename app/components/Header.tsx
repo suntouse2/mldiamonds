@@ -80,7 +80,6 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 90, damping: 20 }}
             >
               <div className="flex justify-between items-center mb-6">
-                <Image src="/logo.svg" width={100} height={20} alt="dhcoin" />
                 <Button
                   className="!border-none"
                   onClick={() => setOpened(false)}
