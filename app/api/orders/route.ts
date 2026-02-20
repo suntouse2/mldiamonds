@@ -1,4 +1,5 @@
 import { ApiError } from "@/app/error/ApiError";
+import { buildOrderKey } from "@/lib/buildOrderKey";
 import { withErrorHandling } from "@/lib/mapError";
 import { gameService } from "@/services/gameService";
 import { orderService } from "@/services/orderService";
@@ -37,7 +38,17 @@ export const POST = withErrorHandling(async (req) => {
     amount: product.price,
   });
 
-  return NextResponse.json({
+  const orderSecret = buildOrderKey(order.id);
+
+  const response = NextResponse.json({
+    orderSecret,
     redirect: paymentUrl,
   });
+  response.cookies.set("order_secret", orderSecret, {
+    httpOnly: true,
+    secure: true,
+    maxAge: 14 * 24 * 60 * 60,
+  });
+
+  return response;
 });

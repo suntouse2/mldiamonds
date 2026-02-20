@@ -69,7 +69,5 @@ export const POST = withErrorHandling(async (req) => {
 
   await galaxyService.createOrder(galaxy_payload);
 
-  await orderService.updateStatus(order.id, "DONE");
-
   return NextResponse.json({ success: true });
 });
