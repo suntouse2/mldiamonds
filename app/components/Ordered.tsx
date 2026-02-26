@@ -90,6 +90,9 @@ export default function Ordered({ products, specialProducts }: Props) {
     return (
       <div className="flex flex-col items-center py-10 animate-in fade-in duration-700">
         <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col items-center shadow-2xl">
+          <p className="text-white font-bold text-xl animate-pulse">
+            Заказ №{order.id}
+          </p>
           <Image
             src="/products/mobile-legends/1.webp"
             alt="Winner"
