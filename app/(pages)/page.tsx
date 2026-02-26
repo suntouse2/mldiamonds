@@ -12,7 +12,9 @@ export default async function Page() {
   if (!game) notFound();
 
   const categories = game.categories;
-  const products = game.categories.flatMap((c) => c.products);
+  const products = game.categories
+    .flatMap((c) => c.products)
+    .filter((p) => !p.isSpecial);
   const credentials = game.credentials;
 
   return (

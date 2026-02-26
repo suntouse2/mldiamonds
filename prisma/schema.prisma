@@ -82,7 +82,7 @@ model Product {
   data       Json
   createdAt  DateTime        @default(now())
   updatedAt  DateTime        @updatedAt
-
+  isSpecial  Boolean         @default(false)
   @@map("products")
 }
 

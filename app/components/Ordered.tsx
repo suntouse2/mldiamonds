@@ -9,9 +9,13 @@ import Image from "next/image";
 import { Loader } from "lucide-react";
 import useSupport from "../hooks/useSupport";
 import ButtonLink from "../ui/ButtonLink";
+import { useRouter } from "next/navigation";
+import Modal from "../ui/Modal";
+import Button from "../ui/Button";
 
 type Props = {
   products: Product[];
+  specialProducts: Product[];
 };
 
 export type CaseItem = {
@@ -19,7 +23,9 @@ export type CaseItem = {
   image: string;
 };
 
-export default function Ordered({ products }: Props) {
+export default function Ordered({ products, specialProducts }: Props) {
+  const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [order, setOrder] = useState<Order | null>(null);
   const [delay, setDelay] = useState<number | null>(2000);
   const { support } = useSupport();
@@ -52,6 +58,10 @@ export default function Ordered({ products }: Props) {
   const winTitle = parseInt(
     (productSnapshot?.data as { title: string })?.title ?? "0"
   );
+
+  const receipt = (p: Product) => {
+    router.push(`/receipt?productId=${p.id}`);
+  };
 
   const allItems: CaseItem[] = useMemo(
     () =>
@@ -95,12 +105,54 @@ export default function Ordered({ products }: Props) {
             {winTitle} Алмазов
           </p>
 
-          <ButtonLink
-            className="mt-4 bg-amber-300! text-black! w-full! text-center!"
-            href="/"
+          <Modal
+            className="w-full max-w-5xl"
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
           >
-            Купить еще
-          </ButtonLink>
+            <h1 className="text-center text-xl font-bold">
+              СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
+            </h1>
+            <div className="flex flex-col mt-4 gap-2">
+              {specialProducts.map((p) => (
+                <div
+                  className="flex border-b pb-4 gap-4 border-white/10 items-center"
+                  key={p.id}
+                >
+                  <Image
+                    src={p.imageSrc ?? ""}
+                    alt={p.title}
+                    width={120}
+                    height={120}
+                  />
+                  <div>
+                    <div className="flex items-center gap-1 mt-2 justify-left">
+                      <h2 className="text-xl font-bold">{p.title}</h2>
+                      <Image
+                        width={40}
+                        height={40}
+                        alt="UC"
+                        src="/coins/diamond.webp"
+                      />
+                    </div>
+
+                    <Button
+                      onClick={() => receipt(p)}
+                      className="mt-4 bg-amber-300! text-nowrap text-black! text-center!"
+                    >
+                      Купить за {p.price} ₽
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Modal>
+          <Button
+            onClick={() => setIsModalOpen(true)}
+            className="mt-4 bg-amber-300! text-black! w-full! text-center!"
+          >
+            ЗАБРАТЬ С 50% СКИДКОЙ
+          </Button>
 
           <ButtonLink
             href={support ?? ""}

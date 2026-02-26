@@ -36,6 +36,7 @@
             "items": {
               "type": "object",
               "properties": {
+                "isSpecial": { "type": "boolean" },
                 "title": { "type": "string" },
                 "price": { "type": "number" },
                 "imageSrc": { "type": "string" },

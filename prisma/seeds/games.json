@@ -140,6 +140,51 @@
                 "category": 1,
                 "quantity": 1
               }
+            },
+            {
+              "isSpecial": true,
+              "title": "9288",
+              "price": 1899,
+              "imageSrc": "/products/mobile-legends/6.webp",
+              "description": "Активация: игровой ID и Server ID",
+              "data": {
+                "title": "165 Алмазов",
+                "product_id": 29558518,
+                "user_field": "User ID",
+                "server_field": "Server ID",
+                "category": 1,
+                "quantity": 1
+              }
+            },
+            {
+              "isSpecial": true,
+              "title": "14590",
+              "price": 2199,
+              "imageSrc": "/products/mobile-legends/7.webp",
+              "description": "Активация: игровой ID и Server ID",
+              "data": {
+                "title": "275 Алмазов",
+                "product_id": 29558522,
+                "user_field": "User ID",
+                "server_field": "Server ID",
+                "category": 1,
+                "quantity": 1
+              }
+            },
+            {
+              "isSpecial": true,
+              "title": "16870",
+              "price": 3299,
+              "imageSrc": "/products/mobile-legends/8.webp",
+              "description": "Активация: игровой ID и Server ID",
+              "data": {
+                "title": "565 Алмазов",
+                "product_id": 29558524,
+                "user_field": "User ID",
+                "server_field": "Server ID",
+                "category": 1,
+                "quantity": 1
+              }
             }
           ]
         }
