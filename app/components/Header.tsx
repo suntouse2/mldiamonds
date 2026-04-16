@@ -30,7 +30,7 @@ export default function Header() {
           <Link href={"/"}>
             <Image
               priority
-              src={"/logo.png"}
+              src={"/mlka2.svg"}
               width={160}
               height={40}
               alt="dhcoin"

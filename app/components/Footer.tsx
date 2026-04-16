@@ -11,7 +11,7 @@ export default async function Footer() {
         <div className="footer__top flex flex-col md:flex-row justify-between gap-8 md:gap-16 mb-10">
           <div className="footer__logo max-w-sm">
             <Image
-              src="/logo.png"
+              src="/mlka2.svg"
               width={140}
               height={40}
               alt="ElitePUBG"
@@ -55,7 +55,7 @@ export default async function Footer() {
               Пользовательское соглашение
             </Link>
           </div>
-          <span>© 2025 MLDiamonds. Все права защищены.</span>
+          <span>© 2025 MLDonat. Все права защищены.</span>
         </div>
       </div>
     </footer>

@@ -14,7 +14,7 @@ export const paymentService = {
         amount,
         description: "Оплата доната",
         orderId,
-        domain: "mldiamonds.shop",
+        domain: "MLDonat.shop",
       }),
     });
 

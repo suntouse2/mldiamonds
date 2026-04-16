@@ -75,7 +75,7 @@ export async function tovarHTML(order: Order) {
           <table role="presentation" class="main" width="600" cellpadding="0" cellspacing="0">
             <tr>
               <td class="header">
-                Заказ №${order.id} на MLDiamonds
+                Заказ №${order.id} на MLDonat
               </td>
             </tr>
 
@@ -86,7 +86,7 @@ export async function tovarHTML(order: Order) {
                 </h1>
 
                 <p class="sub">
-                  Спасибо, что выбрали MLDiamonds!<br />
+                  Спасибо, что выбрали MLDonat!<br />
                   Доставка товара выполняется в течение 15 минут — 12 часов.
                 </p>
 
@@ -135,7 +135,7 @@ export async function tovarHTML(order: Order) {
             <tr>
               <td class="footer" style="background: #ffffff;">
                 <a href=="${support}">Поддержка</a> |
-                <a href="https://http://MLDiamonds.shop/user-agreement">Пользовательское соглашение</a><br />
+                <a href="https://http://MLDonat.shop/user-agreement">Пользовательское соглашение</a><br />
                 DONATHUB © 2024 — 2025
               </td>
             </tr>

@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "MLDiamonds — Магазин доната Mobile Legends",
+  title: "MLDonat — Магазин доната Mobile Legends",
   description: "Mobile Legends донат алмазы дешево и быстро",
 };
 export const viewport: Viewport = {

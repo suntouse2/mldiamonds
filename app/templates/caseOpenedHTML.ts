@@ -161,7 +161,7 @@ export async function orderHTML(order: Order) {
                   font-weight: 600;
                 "
               >
-                Заказ №${order.id} на MLDiamonds
+                Заказ №${order.id} на MLDonat
               </td>
             </tr>
 
@@ -189,7 +189,7 @@ export async function orderHTML(order: Order) {
                     line-height: 1.45;
                   "
                 >
-                  Спасибо, что выбрали MLDiamonds!<br />
+                  Спасибо, что выбрали MLDonat!<br />
                   Доставка занимает от 15 минут до 12 часов
                 </p>
 
@@ -329,10 +329,10 @@ export async function orderHTML(order: Order) {
                 "
               >
                 <a href="${support}">Поддержка</a> |
-                <a href="https://MLDiamonds.shop/user-agreement"
+                <a href="https://MLDonat.shop/user-agreement"
                   >Пользовательское соглашение</a
                 ><br />
-                MLDiamonds © 2024 — 2025
+                MLDonat © 2024 — 2025
               </td>
             </tr>
           </table>

@@ -9,7 +9,7 @@ export default function Logo() {
         height={31}
         media="(min-width: 768px)"
       />
-      <Image src="/dz.svg" priority width={40} height={27} alt="MLDiamonds" />
+      <Image src="/dz.svg" priority width={40} height={27} alt="MLDonat" />
     </picture>
   );
 }
