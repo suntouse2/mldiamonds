@@ -9,12 +9,12 @@ export const paymentService = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        projectId: 13,
-        methodId: 28,
+        projectId: 18,
+        methodId: 33,
         amount,
         description: "Оплата доната",
         orderId,
-        domain: "mldiamonds.shop",
+        domain: "mldonat.store",
       }),
     });
 
